@@ -14,4 +14,14 @@ function compute() {
         "You will receive an amount of <mark>" + interest + "</mark>,<br/> " +
         "in the year <mark>" + year + "</mark>";
 }
+
+function validateAmount() {
+    var principal = document.getElementById("principal").value;
+    var biggerThanZero = parseInt(principal) > 0;
+    if (!biggerThanZero) {
+        alert("Enter a positive number");
+        document.getElementById("principal").focus();
+    }
+
+}
         
